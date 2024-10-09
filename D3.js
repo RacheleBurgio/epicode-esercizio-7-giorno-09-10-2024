@@ -176,7 +176,6 @@ let crewMass = 0
 
 while (i < starWarsCharacters.length) {
   crewMass = crewMass + starWarsCharacters[i].mass
-
   i++
 }
 
@@ -221,11 +220,12 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 
 */
 
-for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (femaleCharacters[i] === charactersNames[i]) {
-    charactersNames[i].splice()
+for (let i = 0; i < femaleCharacters.length; i++)
+  for (let y = 0; y < charactersNames.length; y++) {
+    if (femaleCharacters[i] === charactersNames[y]) {
+      delete charactersNames[y]
+    }
   }
-}
 console.log(charactersNames)
 
 /* --EXTRA-- ESERCIZIO 10
